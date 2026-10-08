@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Booking Website</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-plane"></i>
+                Travel<span>Go</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#booking">Book Now</a>
+                <a href="#profile">Profile</a>
+                <a href="#contact">Contact Us</a>
+
+                <button id="themeToggle" class="theme-btn" title="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Decorative background circles -->
+    <div class="bg-circle circle-one"></div>
+    <div class="bg-circle circle-two"></div>
+
+
+    <main>
+
+        <!-- ================= HOME ================= -->
+        <section id="home" class="hero section">
+
+            <div class="hero-content fade-in">
+
+                <span class="small-heading">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    Explore the World
+                </span>
+
+                <h1>Travel Booking <span>Website</span></h1>
+
+                <p>
+                    Discover amazing destinations, compare travel packages
+                    and plan your perfect journey at the best prices.
+                </p>
+
+                <a href="#destinations" class="gradient-btn">
+                    Explore Destinations
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <!-- Quick Search -->
+                <div class="quick-search">
+
+                    <div class="search-field">
+                        <label for="quickDestination">Destination</label>
+                        <input
+                            type="text"
+                            id="quickDestination"
+                            placeholder="e.g. Paris">
+                    </div>
+
+                    <div class="search-field">
+                        <label for="quickBudget">Maximum Budget (₹)</label>
+                        <input
+                            type="number"
+                            id="quickBudget"
+                            placeholder="e.g. 50000">
+                    </div>
+
+                    <button id="quickSearchBtn" class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Search
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="hero-image fade-in">
+                <div class="hero-image-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+                        alt="Beautiful travel destination">
+                    <div class="floating-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>100+ Places</strong>
+                            <small>Waiting for you</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="section">
+
+            <div class="section-heading fade-in">
+                <span>ABOUT US</span>
+                <h2>Travel Made <span>Simple</span></h2>
+                <p>
+                    Our Travel Booking Website helps users discover destinations,
+                    compare packages and create a convenient travel plan.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text fade-in">
+                    <h3>Why choose our platform?</h3>
+
+                    <p>
+                        This college mini project demonstrates how HTML, CSS
+                        and JavaScript can be combined to create an interactive
+                        travel booking experience without a backend.
+                    </p>
+
+                    <p>
+                        Users can explore destinations, filter packages,
+                        calculate prices, submit bookings and view their
+                        booking history directly in the browser.
+                    </p>
+                </div>
+
+                <div class="objectives-grid">
+
+                    <div class="info-card fade-in">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h4>Simple Booking</h4>
+                        <p>Easy and user-friendly booking process.</p>
+                    </div>
+
+                    <div class="info-card fade-in">
+                        <i class="fa-solid fa-wallet"></i>
+                        <h4>Budget to Luxury</h4>
+                        <p>Packages for different budgets and preferences.</p>
+                    </div>
+
+                    <div class="info-card fade-in">
+                        <i class="fa-solid fa-tags"></i>
+                        <h4>Transparent Pricing</h4>
+                        <p>Clearly displayed package prices.</p>
+                    </div>
+
+                    <div class="info-card fade-in">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <h4>Responsive Design</h4>
+                        <p>Works on desktop, tablet and mobile devices.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= DESTINATIONS ================= -->
+        <section id="destinations" class="section">
+
+            <div class="section-heading fade-in">
+                <span>DESTINATIONS</span>
+                <h2>Explore Popular <span>Places</span></h2>
+                <p>Choose a destination and start planning your journey.</p>
+            </div>
+
+            <!-- Destination Controls -->
+            <div class="destination-controls fade-in">
+
+                <div class="control-search">
+                    <i class="fa-solid fa-search"></i>
+                    <input
+                        type="text"
+                        id="destinationSearch"
+                        placeholder="Search destination...">
+                </div>
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Budget">Budget</option>
+                    <option value="Mid-range">Mid-range</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+
+                <select id="sortSelect">
+                    <option value="default">Sort By</option>
+                    <option value="priceLow">Price: Low to High</option>
+                    <option value="priceHigh">Price: High to Low</option>
+                    <option value="ratingHigh">Rating: High to Low</option>
+                </select>
+
+            </div>
+
+            <!-- Cards generated using JavaScript -->
+            <div id="destinationGrid" class="destination-grid"></div>
+
+            <div id="noResults" class="no-results hidden">
+                <i class="fa-solid fa-face-frown"></i>
+                <h3>No destinations found</h3>
+                <p>Try another destination or filter.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= PLAN YOUR TRIP ================= -->
+        <section id="plan" class="section">
+
+            <div class="section-heading fade-in">
+                <span>PLAN YOUR TRIP</span>
+                <h2>Your Journey, <span>Planned</span></h2>
+                <p id="planDestination">
+                    Select a destination to see suggested travel plans.
+                </p>
+            </div>
+
+            <div class="plan-grid">
+
+                <div class="plan-card fade-in">
+                    <div class="plan-icon">
+                        <i class="fa-solid fa-bus"></i>
+                    </div>
+                    <h3>Transport</h3>
+                    <p id="transportPlan">
+                        Flight/train options will appear here.
+                    </p>
+                </div>
+
+                <div class="plan-card fade-in">
+                    <div class="plan-icon">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <h3>Accommodation</h3>
+                    <p id="accommodationPlan">
+                        Comfortable hotels and stays.
+                    </p>
+                </div>
+
+                <div class="plan-card fade-in">
+                    <div class="plan-icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3>Sightseeing</h3>
+                    <p id="sightseeingPlan">
+                        Popular attractions to explore.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOOKING ================= -->
+        <section id="booking" class="section">
+
+            <div class="section-heading fade-in">
+                <span>BOOK YOUR TRIP</span>
+                <h2>Make Your <span>Reservation</span></h2>
+                <p>Fill in your details and confirm your travel booking.</p>
+            </div>
+
+            <div class="booking-wrapper fade-in">
+
+                <form id="bookingForm" novalidate>
+
+                    <div class="form-grid">
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name">
+                            <small class="error" id="fullNameError"></small>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" placeholder="example@email.com">
+                            <small class="error" id="emailError"></small>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" maxlength="10" placeholder="10-digit number">
+                            <small class="error" id="phoneError"></small>
+                        </div>
+
+                        <!-- Destination -->
+                        <div class="form-group">
+                            <label for="bookingDestination">Destination *</label>
+                            <select id="bookingDestination">
+                                <option value="">Select destination</option>
+                            </select>
+                            <small class="error" id="bookingDestinationError"></small>
+                        </div>
+
+                        <!-- Date -->
+                        <div class="form-group">
+                            <label for="travelDate">Travel Date *</label>
+                            <input type="date" id="travelDate">
+                            <small class="error" id="travelDateError"></small>
+                        </div>
+
+                        <!-- Travellers -->
+                        <div class="form-group">
+                            <label for="travellers">Number of Travellers *</label>
+                            <input type="number" id="travellers" min="1" max="10" value="1">
+                            <small class="error" id="travellersError"></small>
+                        </div>
+
+                        <!-- Package -->
+                        <div class="form-group">
+                            <label for="packageType">Package Type *</label>
+                            <select id="packageType">
+                                <option value="">Select package</option>
+                                <option value="Budget">Budget</option>
+                                <option value="Mid-range">Mid-range</option>
+                                <option value="Luxury">Luxury</option>
+                            </select>
+                            <small class="error" id="packageTypeError"></small>
+                        </div>
+
+                    </div>
+
+                    <!-- Price Box -->
+                    <div class="price-box">
+                        <div>
+                            <span>Price per traveller</span>
+                            <strong id="pricePerPerson">₹0</strong>
+                        </div>
+
+                        <div>
+                            <span>Total Price</span>
+                            <strong id="totalPrice">₹0</strong>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="gradient-btn submit-btn">
+                        Confirm Booking
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- ================= BOOKING HISTORY ================= -->
+        <section id="history" class="section">
+
+            <div class="section-heading fade-in">
+                <span>MY BOOKINGS</span>
+                <h2>Booking <span>History</span></h2>
+                <p>Your bookings are stored locally in this browser.</p>
+            </div>
+
+            <div class="history-wrapper fade-in">
+
+                <div id="emptyHistory" class="empty-history">
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+                    <h3>No bookings yet</h3>
+                    <p>Your confirmed bookings will appear here.</p>
+                </div>
+
+                <div class="table-container hidden" id="historyTableContainer">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Name</th>
+                                <th>Destination</th>
+                                <th>Date</th>
+                                <th>Travellers</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="historyTableBody"></tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= PROFILE / TEAM ================= -->
+        <section id="profile" class="section">
+
+            <div class="section-heading fade-in">
+                <span>OUR TEAM</span>
+                <h2>Meet The <span>Team</span></h2>
+                <p>The students behind this travel booking project.</p>
+            </div>
+
+            <div class="team-grid">
+
+                <div class="team-card fade-in">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/200?img=47" alt="Tulika Chauhan">
+                    </div>
+                    <h3>Tulika Chauhan</h3>
+                    <span>Project Leader</span>
+                    <p>Planning, UI/UX design and presentation.</p>
+                </div>
+
+                <div class="team-card fade-in">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/200?img=12" alt="Ujjwal Sharma">
+                    </div>
+                    <h3>Ujjwal Sharma</h3>
+                    <span>Homepage Developer</span>
+                    <p>Structure, navbar, banner, about section and footer.</p>
+                </div>
+
+                <div class="team-card fade-in">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/200?img=11" alt="Umang Sharma">
+                    </div>
+                    <h3>Umang Sharma</h3>
+                    <span>Destination Cards Developer</span>
+                    <p>Destination data, cards, search, filter and sorting.</p>
+                </div>
+
+                <div class="team-card fade-in">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/200?img=33" alt="Tushar Rajput">
+                    </div>
+                    <h3>Tushar Rajput</h3>
+                    <span>Booking Form Developer</span>
+                    <p>Form validation, price calculation and booking system.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="section">
+
+            <div class="section-heading fade-in">
+                <span>CONTACT US</span>
+                <h2>We're Here To <span>Help</span></h2>
+                <p>Our support team is available 24x7.</p>
+            </div>
+
+            <div class="contact-wrapper fade-in">
+
+                <div class="contact-info">
+
+                    <h3>Get in touch</h3>
+
+                    <p>
+                        Have a question about destinations or bookings?
+                        Send us a message and we'll be happy to help.
+                    </p>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <strong>24x7 Support</strong>
+                            <p>We're always available to assist you.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>support@travelgo.example</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form id="contactForm" class="contact-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="contactName">Name *</label>
+                        <input type="text" id="contactName" placeholder="Your name">
+                        <small class="error" id="contactNameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email *</label>
+                        <input type="email" id="contactEmail" placeholder="Your email">
+                        <small class="error" id="contactEmailError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+                        <small class="error" id="messageError"></small>
+                    </div>
+
+                    <button type="submit" class="gradient-btn">
+                        Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                    <div id="contactSuccess" class="success-message hidden">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Your message has been submitted successfully!
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <i class="fa-solid fa-plane"></i>
+                    Travel<span>Go</span>
+                </a>
+
+                <p>
+                    Making travel planning simple, affordable and enjoyable.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#booking">Book Now</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 TravelGo | College Mini Project | All Rights Reserved
+        </div>
+
+    </footer>
+
+
+    <!-- ================= BOOKING MODAL ================= -->
+    <div id="bookingModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h2>Booking Confirmed!</h2>
+
+            <p>Your trip has been successfully booked.</p>
+
+            <div id="bookingSummary" class="booking-summary"></div>
+
+            <button id="modalHistoryBtn" class="gradient-btn">
+                View Booking History
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
